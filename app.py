@@ -179,8 +179,8 @@ def main():
     st.sidebar.header("About App")
     st.sidebar.info("Industrial Training Project")
     st.sidebar.header("Get Datasets")
-    st.sidebar.markdown("[COVID 19 DataSet](./Dataset/covdataset.csv)")
-    st.sidebar.markdown("[GDP DataSet](./Dataset/GDP.csv)")
+    st.sidebar.markdown("[COVID 19 DataSet](https://raw.githubusercontent.com/nanak-singh/covid-data-analysis/main/Dataset/covdataset.csv)")
+    st.sidebar.markdown("[GDP DataSet](https://raw.githubusercontent.com/nanak-singh/covid-data-analysis/main/Dataset/GDP.csv)")
     st.sidebar.header("Made By")
     st.sidebar.info("""
         Prabhnoor Kaur\n
