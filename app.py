@@ -91,60 +91,58 @@ def main():
 
     
     
-    st.subheader("GDP vs Max Infection Rate")
-
-    st.markdown("GDP vs Max Infection Rate")
+    st.title("Max Infection Rate vs GDP (Scatter Plot)")
     x = df2["GDP"]
     y = df2["max_infection_rate"]
-    sns.scatterplot(x,y)    
+    sns.scatterplot(x,y)
     
     st.pyplot()
 
-    st.markdown("GDP vs LOG(Max Infection Rate)")
+    st.title("LOG(Max Infection Rate) vs GDP (Scatter Plot)")
     sns.scatterplot(x,np.log(y))
     st.pyplot()
 
-    st.markdown("GDP vs LOG(Max Infection Rate)")
+    st.title("LOG(Max Infection Rate) vs GDP (Reg Plot)")
     sns.regplot(x, np.log(y))
     st.pyplot()
     
     
-    st.markdown("Unemployment Rate vs Max Infection Rate")
-    x = df2["Unemployment rate"] 
+    st.title("Max Infection Rate vs Unemployment Rate (Scatter Plot)")
+    x = df2["Unemployment rate"]
     y = df2["max_infection_rate"]
 
     sns.scatterplot(x,y)
     st.pyplot()
 
 
-    st.markdown("Unemployment Rate vs LOG(Max Infection Rate)")
+    st.title("LOG(Max Infection Rate) vs Unemployment Rate")
     x = df2["Unemployment rate"]
     y = df2["max_infection_rate"]
     sns.scatterplot(x,np.log(y))
     st.pyplot()
 
 
-    st.markdown("Unemployment Rate vs LOG(Max Infection Rate)")
+    st.title("LOG(Max Infection Rate) vs Unemployment Rate (Reg Plot)")
     sns.regplot(x, np.log(y))
     st.pyplot()
 
 
 
-    st.markdown("GDP vs Unemployment Rate")
+    st.title("Unemployment Rate vs GDP (Scatter Plot)")
     x = df2["GDP"]
     y = df2["Unemployment rate"]
     sns.scatterplot(x,y)
     st.pyplot()
 
 
-    st.markdown("GDP vs Unemployment Rate")
+    st.title("Unemployment Rate vs GDP (Scatter Plot)")
     x = df2["GDP"]
     y = df2["Unemployment rate"]
     sns.scatterplot(x,np.log(y))
     st.pyplot()
 
 
-    st.markdown("GDP vs LOG(Unemployment Rate)")
+    st.title("LOG(Unemployment Rate vs GDP (Reg Plot))")
     sns.regplot(x, np.log(y))
     st.pyplot()
 
@@ -159,7 +157,7 @@ def main():
     total_cases = pd.DataFrame(df_copy["sum_of_cases"])
 
 
-    st.markdown("Pie Chart - Total COVTD cases Distribution")
+    st.markdown("Pie Chart - Total COVID cases Distribution")
     plt.pie(sum_of_cases, shadow=True,startangle=90)
     plt.legend(total_cases.index,title="name of countries",loc="center left",bbox_to_anchor=(1, 0, 0.5, 1))
     plt.show()
